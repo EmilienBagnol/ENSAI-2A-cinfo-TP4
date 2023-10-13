@@ -8,13 +8,19 @@ class Utilisateur:
         nom_utilisateur,
         prenom_utilisateur,
         age,
-        stations_preferees,
+        liste_stations_preferees,
     ):
         self.id_utilisateur = id_utilisateur
         self.nom_utilisateur = nom_utilisateur
         self.prenom_utilisateur = prenom_utilisateur
         self.age = age
-        self.stations_preferees = stations_preferees
+        self.liste_stations_preferees = liste_stations_preferees
+
+    def associer_stations_preferees(self, stations_preferees):
+        self.liste_stations_preferees.append(stations_preferees)
+        stations_preferees.associer_utilisateur(
+            self
+        )  # Associer cette instance d'utilisateur à la liste de stations préférées
 
     def __str__(self):
         return f"Utilisateur {self.id_utilisateur}: {self.prenom_utilisateur} {self.nom_utilisateur}"
