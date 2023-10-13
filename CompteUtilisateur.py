@@ -14,4 +14,8 @@ class CompteUtilisateur:
 
 def créer_compte():
     identifiant = input("Entrez votre identifiant :")
-    raise ValueError(identifiant is not string)
+    if not isinstance(identifiant, str):
+        raise ValueError("L'identifiant doit être une chaîne de caractères")
+
+# Exemple d'appel de la fonction créer_compte
+créer_compte()
