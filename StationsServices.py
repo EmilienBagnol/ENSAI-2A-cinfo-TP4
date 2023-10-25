@@ -4,7 +4,7 @@ from Horaires import Horaires
 from Services import Services
 
 
-class StationService:
+class StationsServices:
     def __init__(
         self,
         id_station,
@@ -32,7 +32,7 @@ horaire1 = Horaires(1, "Lundi, 10:00 - 12:00")
 
 service1 = Services(1, "Lavage de voiture")
 
-station = StationService(
+station = StationsServices(
     1, "Ma Station", "48.8588443, 2.2943506", [prix1], [horaire1], [service1]
 )
 
